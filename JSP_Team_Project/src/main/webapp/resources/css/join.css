@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/*    body{background: url(../images/main01.jpg) no-repeat center; }*/
+
+#main {width: 100%; 
+    display: table;
+    vertical-align: middle;
+    margin: 0 auto;
+    position: relative;
+}
+#main::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 760px;
+    background-color: #f9f9f9;
+    position: absolute; left: 0;bottom: 0;
+    z-index: -1;
+}
+
+#sub_banner{width: 100%; max-width: 1200px; height: 200px; background: url(../images/bg_list.jpg) no-repeat center -800px; display: table;
+    border-bottom: 2px dashed #eaeaea;
+    margin: 0 auto;
+}
+#sub_banner p{display: table-cell; vertical-align: middle; text-align: center; color: #333;
+}
+#sub_banner strong{display: block;line-height: 60px; font-size: 48px; font-weight: bold; margin-bottom: 20px;}
+#sub_banner span{display: block; opacity: 0.9;}
+
+/*각 사항 제목*/
+.join_tit{
+    display: block;
+    width: 150px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute; left: -200px; top: 0px;
+    font-size: 22px;
+    line-height: 30px;
+    background: linear-gradient(333deg, rgba(65,62,62,1) 0%, rgba(0,0,0,1) 35%, rgba(79,79,79,1) 100%);
+    color: #fff;
+    border-radius: 5px;
+}
+
+/*회원가입 폼*/
+
+#join_form{width: 500px; height: auto; margin: 50px auto; }
+#join_form>div{
+    position: relative;
+}
+.personal_info > p{margin-bottom: 30px;}
+.personal_info > p label{width: 100%; display: block; height: 25px; font-size: 0.9em; position: relative;}
+.personal_info > p label span{ position: absolute; right: 10px; font-size: 0.9em; color: #e76060;}
+.personal_info > p input{
+    height: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+/*아이디 폼*/
+.personal_info  #u_id{
+    width: 65%;
+    display: inline-block;
+}
+/*중복 체크 버튼*/
+#u_id_check{
+    width: 30%;
+    margin-left: 4%;
+    cursor: pointer;
+    transition: all 0.2s;
+    padding-left: 0;
+}
+#u_id_check:hover{
+    background-color: #ddd;
+}
+
+/*전화번호 폼*/
+.personal_info .tel_wrap input{width: 154px; text-align: center; text-indent: 0;}
+
+/*이용약관 동의 wrap */
+#agree{ margin-top: 100px;}
+
+/*모두 동의*/
+.chk_all{
+    background-color: #fafafa; padding: 20px 10px;
+    border: 1px solid #c1c1c1;
+}
+.chk_all:hover{font-weight: bold;}
+
+/*이용약관 텍스트부분 WRAP */
+#agree>div{
+    margin: 30px 0;
+}
+#agree .agreebox_tit{
+    font-weight: bold;
+    font-size: 1.05em;
+    margin: 5px 0;
+}
+
+/*-----이용약관 텍스트 부분----*/
+#agree .agreebox_txt{
+    border: 1px solid #c1c1c1;
+}
+#agree .agreebox_txt textarea{
+    outline: none;
+    border: none;
+    resize: none;
+}
+#agree .agreebox_txt textarea::-webkit-scrollbar{
+    width: 8px;
+    background-color: #f1f1f1;
+}
+#agree .agreebox_txt textarea::-webkit-scrollbar-thumb{
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+
+#agree input{color: #7b84db; margin: 0 5px;}
+
+#agree #chk1,#chk2,#chk3{ background-color: #ccc;}
+
+#agree label.type01{ cursor: pointer;height: 20px;display: inline-block;
+    -webkit-user-select: none;-ms-user-select: none; user-select: none;
+}
+#agree label.checked{} /*js*/
+#agree textarea{width: 100%; margin: 0;padding: 5px; box-sizing: border-box;}
+
+
+/*회원가입 버튼*/
+#login_btn{}
+#login_btn button{
+    width: 100%; height: 60px; outline: none;
+    margin: 0 auto;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+#login_btn .login_submit{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #8117fe, #af28fe);
+    
+}
+#login_btn .cancel{
+    background: #ccc;
+}
+
+#login_btn button:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing: 0.3em;
+}
+
+
+
