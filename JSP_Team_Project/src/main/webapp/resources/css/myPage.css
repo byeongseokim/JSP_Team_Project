@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*myPage.css*/
+
+/*----------서브페이지 감싸는 div-------------*/
+#mypage .container_wrap{
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "tit tit tit"
+        "left right right";
+}
+
+/*----------myPage.html-------------*/
+.sub_tit_line{height: 50px; background: linear-gradient(to right, #8117fe, #af28fe); color: #fff;}
+.sub_tit_line>ul{width: 100%; max-width: 750px; height: 50px; margin: 0 auto; }
+.sub_tit_line li{display: inline-block; width: 220px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.sub_tit_line .sub_tit_home{width: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sub_tit_line .sub_tit_home a{
+    text-indent: -9999px;
+    background: url(../images/home.png) no-repeat center center;}
+.sub_tit_line a{width: 100%;display: block; line-height: 50px; padding: 0 20px;}
+
+#mypage .container_wrap{}
+
+/*-------------섹션 공통-----------------*/
+#mypage section{
+    width: 100%;height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+}
+#mypage h3{
+    margin-top: 20px; margin-bottom: 30px;
+    font-size: 1.4em; height: 60px; line-height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*-------------첫번째(맨위 제목)-----------------*/
+.mypage_tit{
+    text-align: center;
+    grid-area: tit;
+    background-color: #fcf;
+    height: 80px; line-height: 80px; font-size: 2em; text-align: center;
+    border-top: 2px solid #333;
+    background-color: #fefefe;
+    margin-top: 50px;
+}
+
+/*-------------두번째 (왼쪽 메뉴리스트)-----------------*/
+.mypage_list{grid-area: left; background-color: #fff; padding-right: 20px;}
+.mypage_list>ul{}
+.mypage_list> ul .profile{
+    text-align: center;
+    padding: 20px;
+}
+.mypage_list> ul .profile img{}
+.mypage_list> ul .profile h4{margin: 20px 0 30px; font-size: 1.2em;}
+.mypage_list li{
+    border: 1px solid #e1e1e1; border-radius: 5px;
+    margin-bottom: 10px;
+}
+.mypage_list a{
+    display: block;width: 100%;
+    padding: 20px;
+    color: #999;
+}
+.mypage_list a:hover{
+    background: radial-gradient(circle, rgba(252,248,255,1) 0%, rgba(238,226,250,1) 100%);
+    color: #333;
+}
+
+/*--------세번째 (내용)----------*/
+.mypage_con{
+    grid-area: right;
+    padding: 20px 50px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+
+/*--------table 공통----------*/
+.mypage_con>div{display: none;}
+.mypage_con>div:nth-child(1){display: block;}
+.mypage_con>div table{
+    width: 100%;
+
+    border-bottom: 2px solid #555;
+}
+.mypage_con>div table tr{height: 50px;
+}
+.mypage_con>div table tr:nth-child(2n){
+    background-color: #f9f9f9;
+}
+.mypage_con>div table td{
+    vertical-align: middle;
+}
+.mypage_con>div table td:nth-child(1){width: 20%; font-weight: bold;}
+.mypage_con>div table td:nth-child(2){width: 80%;}
+.mypage_con>div table input{outline: none; border: none; background-color: transparent;}
+
+
+/*--------예약 관리----------*/
+
+#my_reserve_wrap{
+    border-bottom: 3px dashed #eaeaea;
+    margin-bottom: 30px;
+}
+
+/*---예약 취소---*/
+.btn_cancel{}
+.btn_cancel button, .cancelBtn{
+    display: block; width: 150px;height: 50px; margin: 50px 5px;
+    border-radius: 10px; background-color: #ccc;
+    color: #fff; font-size: 1em; cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+    border: none;
+}
+
+.btn_cancel button:hover {background-color: #999;}
+.cancelBtn:hover {background-color: #333;}
+
+/*-------관리자페이지 유저 검색 버튼*/
+#user_id{
+    height: 40px;
+}
+#user_btn{
+    width: 150px;
+    height: 40px;
+    margin: 50px 5px;
+    border-radius: 5px;
+    background-color: #e8c5fc;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+    border: none;
+}
+#user_btn:hover{
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------------------*/

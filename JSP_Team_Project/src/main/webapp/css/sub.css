@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*----------main----------*/
+main{margin-bottom: 100px;}
+#notice{width: 100vw;}
+
+/*----------서브메뉴 타이틀 영역-----------*/
+.sub_tit_wrap{padding: 150px 0; background: linear-gradient(to right, #8117fe, #af28fe);}
+.sub_tit_inner{width: 95%; margin: 0 auto;}
+.sub_tit_inner h2{text-align: center; font-size: 60px; font-weight: 900;
+    color: #fff;
+}
+#festival_list .sub_tit_wrap{background: url(../images/bg_list.jpg) no-repeat center center;}
+
+/*----------서브페이지 감싸는 div-------------*/
+.container_wrap{width: 100%; max-width: 1200px; height: auto; margin: 0 auto; }
+
+
+
+/*-----------notice.html------------*/
+.container_inner{width: 100%; height: 60px; margin: 0 auto;margin-bottom: 45px;}
+.notice_category{text-align: center;}
+.notice_category li{
+    height: 60px; width: 250px;
+    border-radius: 10px; display: inline-block;  border: 1px solid #eaeaea;
+    background-color: #fafafa;
+    transition: all 0.3s;
+    font-size: 18px;
+
+}
+.notice_category li+li{margin-left: 20px;}
+.notice_category li a{width: 100%; display: block;line-height: 60px;
+}
+.notice_category li a:hover{
+    font-weight: bold;
+}
+.notice_category .on{
+    background: linear-gradient(to right, #8117fe, #af28fe);
+    color: #fff;
+    font-weight: bold;
+}
+/*-------*/
+#board_wrap{margin-top: 50px;}
+#board_wrap table{width: 100%; border-collapse: collapse; border-spacing: 0 5px; background-color: #fff;
+    border-top: 2px solid #aaa;border-bottom: 1px solid #aaa;
+    text-align: center;
+}
+#board_wrap tr{background-color: #fff; border-bottom: 1px solid #ececec;}
+#board_wrap th, #board_wrap tr:hover{background-color: #fafafa;}
+
+#board_wrap td, #board_wrap th{height: 80px; font-size: 16px; line-height: 80px;}
+.bo_num{width: 80px;text-align: center; color: #999;}
+.bo_tit{font-weight: bold;}
+.bo_tit a{width: 100%; display: block;}
+.bo_date{color: #999;}
+
+
+
+/*----------검색 부분-------------*/
+#search_wrap{width: 100%; height: 80px; margin: 20px auto;  background-color: #f1f1f1; text-align: center;}
+.list_search{border: 1px solid #aaa; width: 300px; height: 48px; margin-top: 15px; text-indent: 20px; font-size: 14px; border-radius: 5px;  color: #aaa;}
+#list_search_btn{height: 48px; width: 80px; outline: none; border: none; background-color: #8117fe; color: #fff; border-radius: 5px; cursor: pointer; transition: all 0.2s;}
+.list_search:hover{background-color: #fafafa;}
+#list_search_btn:hover{background-color: #781ce5;}
+/*-----------------------*/
+/*-----------------------*/
+.qna_write{
+    margin: 20px 0;
+    text-align: right;
+}
+.qna_write a{
+    width: 100px;
+    height: 50px;
+    padding: 2px 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    color: #666;
+}
+.qna_write a:hover{
+    color: #333;
+    border: 1px solid #666;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
