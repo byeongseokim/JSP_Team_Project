@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+
+/*공통 레이아웃 - 예를 들면 header부분*/
+/*----------헤더 시작----------*/
+header{width: 100vw; height: 100px; background-color: rgba(241, 241, 241, 0.14); z-index: 100;}
+#header{position: relative;}
+
+/*--왼쪽 로고 부분--*/
+#logo{position: absolute; left: 50px;top: 20px; width: 120px;height: 60px; }
+#logo a{width: 100%; display: block;
+    padding-top: 10px;
+    height: 60px;
+    font-weight: 900; font-size: 25px; letter-spacing: -1.7px;
+    line-height: 0.8em;
+    background: linear-gradient(157deg, rgba(77,55,115,1) 0%, rgba(141,91,212,1) 42%, rgba(199,168,244,1) 69%, rgba(91,41,163,1) 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Exo", sans-serif;
+    transition: all 0.4s;
+}
+#logo:hover a{letter-spacing: 0px; }
+
+/*--메뉴 부분--*/
+#gnb{width: 100%; max-width: 770px; margin: 0 auto; text-align: center; line-height: 100px; font-weight: bold; font-size: 18px;}
+#gnb ul{display: flex;}
+#gnb ul li{width: calc(100% / 4);}
+#gnb ul a{display: block;width: 100%;}
+#gnb ul li:hover a{color: #6c43ff;}
+
+/*--오른쪽 로그인 및 회원가입--*/
+#header_login{position: absolute; top: 35px; right: 50px; height: 60px;}
+#header_login a{font-size: 12px; display: inline-block; padding: 10px 20px; margin: 0 5px;
+    color: #fff;
+    background: linear-gradient(to right, #8117fe, #af28fe);
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+#header_login a:hover{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: #fff;
+    color: #8117fe;
+}
+.u_out{display: none;}
+.u_on{display: block;}
+
+/*-------------------
+*/
+.user_name{position: absolute;
+    right: 50px;
+    top: 105px;
+    width: 200px;
+    height: 40px;
+    padding: 12px 0;
+    text-align: center;
+    background-color: rgba(256,256,256,0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.user_name strong{
+    font-weight: bold;
+    color: #8117fe;
+}
+
+/*--------input-------------*/
+input{
+    border: 1px solid #e5e5e5;
+    outline: 0px solid #e8c5fc;
+    padding-left: 10px;
+}
+
+input:focus{
+    outline: 2px solid #e8c5fc;
+}
+
+/*----------오른쪽 퀵 메뉴----------*/
+/*navi menu S*/
+#navi{}
+.quick-menu{width: 65px;height: auto;
+    position: fixed; right: 10px;bottom: 120px;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.1) 0 10px 20px;
+    border-radius: 8px;
+    transition: all 0.8s;
+    z-index: 1000;
+}
+.quick-menu li{width: 65px;height: 65px; padding: 10px;
+    position: relative;
+}
+
+.quick-menu li+li{margin-top: 5px;}
+.quick-menu span{width: 80px; display: block;
+    padding: 5px 0;
+    opacity: 0;
+    position: absolute; left: -130px;top: 17px;
+    background-color: rgba(0,0,0,0.7);
+    color: #fff; font-size: 11px; text-align: center;
+    border-radius: 18px;
+    transition: all 0.5s ease
+}
+.quick-menu a{display: block; width: 45px;height: 45px;
+    font-size: 18px; color: #ccc; text-align: center;
+    transition: all 0.5s
+}
+.quick-menu i{display: block; padding: 10px;}
+.quick-menu li+li:hover a{
+    border-radius: 100%;
+    background: linear-gradient(to right, #8117fe, #af28fe);
+    box-shadow: rgba(0,0,0,0.2) 0 5px 6px;
+    color: #fff;
+}
+.quick-menu li:hover span{opacity: 1; left: -70px;}
+.quick-menu li:nth-child(1) a{color: #461b0e;
+    background-color: #fdcd21;
+    border-radius: 100%
+}
+.quick-top{
+    position: fixed; right: 10px;bottom: 10px;
+    z-index: 1000;
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    opacity: 0.3;
+}
+.quick-top:hover{
+    opacity: 1;}
+
+/*-------서브 상단 타이틀라인------*/
+.sub_tit_line{height: 50px; background: linear-gradient(to right, #8117fe, #af28fe); color: #fff;}
+.sub_tit_line>ul{width: 100%; max-width: 750px; height: 50px; margin: 0 auto; }
+.sub_tit_line li{display: inline-block; width: 220px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.sub_tit_line .sub_tit_home{width: 50px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sub_tit_line .sub_tit_home a{
+    text-indent: -9999px;
+    background: url(../images/home.png) no-repeat center center;}
+.sub_tit_line a{width: 100%;display: block; line-height: 50px; padding: 0 20px;}
+
+.sub_h2_tit{
+    height: 100px; line-height: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin: 50px auto;
+
+}
+
+/*sub 타이틀 부분*/
+#sub_banner{width: 100%; max-width: 1200px; height: 200px; background: #fff url(../images/bg_list.jpg) no-repeat center -800px; display: table;
+    border-bottom: 2px dashed #eaeaea;
+    margin: 0 auto;
+}
+#sub_banner p{display: table-cell; vertical-align: middle; text-align: center; color: #333;
+}
+#sub_banner strong{display: block;line-height: 60px; font-size: 48px; font-weight: bold; margin-bottom: 20px;}
+#sub_banner span{display: block; opacity: 0.9;}
+
+
+
+/*------------페이지 인덱스 번호 -----------*/
+.nav{
+    clear: both;
+    width: 100%; height: 40px; margin: 50px auto;
+    text-align: center;
+}
+.nav ul{}
+.nav li{display: inline-block;
+
+}
+.nav li a{width: 40px;height: 40px; display: block;
+    border-radius: 100%; border: 1px solid #ddd; background-color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 500;
+}
+.nav .nav_prev a, .nav .nav_next a{ background-color: #f2e2f0;text-indent: -9999px; margin: 0 10px;}
+.nav_prev a{background: url(../images/btn_prev.gif) no-repeat center; }
+.nav_next a{background: url(../images/btn_next.gif) no-repeat center; }
+.nav li a:active, .nav li a.sel{color: #fff;background-color: #8f1cfe; cursor: auto}
+.nav li a:active:hover, .nav li a.sel:hover{color: #fff;background-color: #8f1cfe; cursor: auto}
+.nav li a:hover{background-color: #f1f1f1;}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------리뷰------------------*/
+.detail_review{
+    width: 100%;height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+}
+/*---------------- 리뷰 작성 부분------------*/
+
+.review_write{width: 100%; padding: 20px; margin: 20px 0;}
+.review_write>div{margin-bottom: 10px; height: 40px;}
+.review_write>div>h3{float: left; font-size: 20px; margin-right: 20px; line-height: 40px;}
+/*---평점(별) 작성 부분---*/
+.review_grade{height: 40px; float: left; background-color: #fff; box-shadow: 0 0 2px rgba(129, 23, 254, 0.2); border-radius: 5px; overflow: hidden;}
+.review_grade>*{float: left; line-height: 40px;}
+.review_grade>label{background-color: #a375d9; color: #fff; padding: 0 7px;}
+.review_grade>#grade{outline: none; width: 40px; margin-left: 20px; text-align: center; color: #a375d9; font-weight: bold;}
+/*----------별-----------*/
+.review_write_star{margin: 5px 0 0 10px;}
+.review_write_star span{
+    background:url(../images/star2.png) no-repeat 0 0;
+    background-size: contain;
+    width: 20px;height: 20px; display: inline-block; text-indent: -9999px;cursor: pointer; overflow: hidden;
+}
+.review_write_star .on{background-image: url(../images/star1.png); }
+/*--------------------*/
+.review_txt{width: 100%;}
+.review_txt>#content{width: 100%; padding: 20px; border-radius: 10px;
+    outline: none; border: 2px solid #e1e1e1;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.review_txt>button{float: right; margin-right: 10px; outline: none; border: none; background-color: #fff; color: #aaa; padding: 4px 5px; cursor: pointer; transform: translateY(-40px); font-weight: bold;}
+.review_txt> button:hover{color: #111;
+    text-shadow: 0 0 15px rgba(129, 23, 254, 0.7);
+}
+.review_txt textarea{
+    width: 100%;
+    padding: 20px;
+    outline: 1px solid #eaeaea;
+}
+
+.review_txt>#writeBtn{}
+.review_txt>#modBtn{}
+/*----------------*/
+
+.review_grade{}
+.review_grade>label{}
+.review_grade>input{}
+
+/*------- 리뷰 리스트---------*/
+#reviewList{border-top: 1px solid #333;  padding: 20px;
+    background-color: #fff;
+}
+#reviewList ul{}
+#reviewList li{margin-bottom: 20px; border-bottom: 1px solid #eaeaea;}
+.review_list_id{height: 36px; margin-bottom: 10px; }
+.review_list_id img{float: left; margin-right: 10px;}
+.review_list_id span{float: left; height: 36px; line-height: 36px; color: #7c29de; font-weight: bold;}
+#reviewList>ul>li>div{width: 100%;height: 20px; margin-bottom: 10px;}
+.review_list_grade{float: left;}
+.review_list_grade span{}
+.review_list_grade img{height: 15px; margin-right: 5px;}
+.review_list_date{float: left; font-size: 0.8em; line-height: 20px;}
+.review_list_date span{}
+.review_list_content{}
+.review_list_content span{}
+
+.btn_wrap{text-align: right; margin-bottom: 20px;}
+.btn_wrap button{outline: none; border: none; background-color: #fff; color: #aaa; padding: 4px 15px; cursor: pointer;}
+.btn_wrap button:hover{color: #111;
+    text-shadow: 0 0 15px rgba(129, 23, 254, 0.7); font-weight: bold;
+}
+#reviewList .modBtn{margin-right: 10px;}
+#reviewList .delBtn{}
+
+#description{
+    max-width: 1200px;
+    text-align: center;
+    line-height: 1.8em;
+}
+#description strong{
+    color: #7c29de;
+}
+#description table{
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+#description table tr{
+    height: 40px;
+}
+#description table td{
+    border: 1px solid #ccc;
+    vertical-align: middle;
+}
+
+/*-------리뷰 글이 없을 경우 대체값---------*/
+.review_default{display: none; height: 200px; text-align: center; background-color: #f1f1f1; font-weight: bold; color: #999; line-height: 200px;}
+
