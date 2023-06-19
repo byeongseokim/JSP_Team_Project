@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*detail.css*/
+
+/*----------서브페이지 감싸는 div-------------*/
+#reservation .container_wrap{
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "tit tit tit"
+        "left left right";
+}
+
+/*----------reservation.html-------------*/
+.sub_tit_line{height: 50px; background: linear-gradient(to right, #8117fe, #af28fe); color: #fff;}
+.sub_tit_line>ul{width: 100%; max-width: 750px; height: 50px; margin: 0 auto; }
+.sub_tit_line li{display: inline-block; width: 220px;
+     border-right: 1px solid rgba(255, 255, 255, 0.3); }
+.sub_tit_line .sub_tit_home{width: 50px;
+border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+.sub_tit_line .sub_tit_home a{
+    text-indent: -9999px;
+    background: url(../images/home.png) no-repeat center center;}
+.sub_tit_line a{width: 100%;display: block; line-height: 50px; padding: 0 20px;}
+
+#reservation .container_wrap{}
+
+/*-------------섹션 공통-----------------*/
+#reservation section{
+    width: 100%;height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+}
+#reservation h3{
+    margin-top: 20px; margin-bottom: 30px;
+    font-size: 1.4em; height: 60px; line-height: 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+/*-------------첫번째 섹션-----------------*/
+.reservation_nav{text-align: center;position: relative;
+    grid-area: tit;
+}
+.reservation_nav h2{height: 80px; line-height: 80px; font-size: 1.5em; text-align: center;
+    border-top: 2px solid #333; 
+    border-bottom: 1px solid #eee; 
+    background-color: #fefefe;
+    margin-top: 50px;
+}
+.reservation_nav>p{ display: inline-block; }
+.reservation_nav>p+p::after{content: ""; display: block;
+width: 110px; height: 2px; border-bottom: 1px dashed #c19dd6;
+    position: absolute; left: 50%;top: 18px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+.reservation_nav>p+p{margin-left: 50px;}
+.reservation_nav span{
+    display: inline-block;
+    border-radius: 100%; background-color: #666;
+    color: #fff; line-height: 40px;
+    width: 40px;height: 40px;  margin-bottom: 20px;
+}
+.reservation_nav strong{display: block;}
+/*---첫번째 아이만 색칠하기 ----*/
+.reservation_nav>p:first-child span{background: linear-gradient(to right, #8117fe, #af28fe);}
+.reservation_nav>p:first-child strong{color: #8117fe;}
+
+/*-------------두번째 섹션-----------------*/
+.reservation_info{grid-area: left;}
+
+.reservation_wrap{}
+.reservation_wrap>li{}
+
+.reservation_wrap .caution{
+    border: 2px solid #ececec; border-radius: 10px;
+    padding: 30px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+.reservation_wrap .caution>li:first-child{color: #eb4141; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;}
+
+/*---사용자 정보----*/
+.reservation_user_info{}
+.reservation_user_info table{width: 100%;
+    border-top: 2px solid #333;
+}
+.reservation_user_info table tr{}
+.reservation_user_info table td{
+    border: 1px solid #eaeaea;
+    height: 70px;
+    vertical-align: middle;
+    padding: 5px 10px;
+}
+.reservation_user_info table td:first-child{
+    text-align: center;
+    background-color: #fafafa;
+}
+.reservation_user_info table input{
+    height: 40px;
+}
+
+
+
+/*--------세번째----------*/
+#myInfo{grid-area: right;padding: 10px; }
+#myInfo>div{background-color: #f6f1fc;
+    padding: 20px;
+    border-radius: 10px;}
+
+#myInfo .title{ margin-bottom: 20px; font-size: 1.2em; font-weight: bold; color: #8117fe}
+#myInfo ul{}
+#myInfo ul li{width: 100%; height: 30px; line-height: 30px;}
+#myInfo ul span{display: block;float: left;}
+#myInfo ul strong{display: block;float: right;}
+
+
+/*--------------------------------------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+/*------------------------------------------*/
+
+/*--두번째 달력 섹션--*/
+.detail_select_date{
+    width: 100%;height: 700px;
+    position: relative;
+    padding: 100px 0;
+    
+}
+.detail_select_date>div{
+    height: 500px;
+}
+.detail_select_date>div>h2{grid-area: tit;}
+
+/*----캘린더 부분----*/
+.calendar_wrap{width: 400px; display: inline-block;}
+.calendar_wrap>p{display: inline-block;}
+
+/*오른쪽*/
+.calendar_desc>form{ grid-area: b;}
+.calendar_desc>form>p{margin-bottom: 20px;width: 500px;}
+.calendar_desc>form>p>strong{display: block; font-size: 20px; border-bottom: 1px solid #ccc; height: 40px; margin-bottom: 10px;}
+
+.calendar_desc>form>p>span{
+    display: block;
+    background-color: #efefef;
+    height: 80px;
+     text-align: right;
+    padding-top: 20px; padding-right: 20px;
+}
+
+.select_number{}
+.select_number>strong{}
+.select_number>span{height: 38px; border-radius: 5px; overflow: hidden; }
+.select_number>span>*{ width: 40px; height: 38px;
+    line-height: 38px; text-align: center;
+}
+.select_number input:nth-child(odd){color: #fff; background-color: #6c6c6c; font-weight: bold; font-size: 18px; cursor: pointer;}
+
+/*예약하기 버튼*/
+.btn_reservation{}
+.btn_reservation input{display: block; width: 100%;height: 50px; margin: 50px 5px;
+    border-radius: 10px; background-color: #af28fe;
+    color: #fff; font-size: 1.2em; cursor: pointer;
+    transition: all 0.3s;
+}
+.btn_reservation:hover input{background-color: #8117fe; letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
