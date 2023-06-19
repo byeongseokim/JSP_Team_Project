@@ -1,0 +1,188 @@
+@charset "utf-8";
+/*detail.css*/
+
+/*----------서브페이지 감싸는 div-------------*/
+#festival_detail .container_wrap{min-width: 1200px; max-width: none; }
+
+/*----------festivalDetail.html-------------*/
+
+
+#festival_detail .container_wrap{}
+
+/*-------------섹션 공통-----------------*/
+#festival_detail section{
+    width: 100%;height: auto;
+    position: relative;
+    padding: 100px 0;
+    clear: both;
+}
+#festival_detail section>div{max-width: 1300px; margin: 0 auto; position: relative;}
+#festival_detail section>div>h2{text-align: center; font-size: 50px; margin-bottom: 50px; position: relative;}
+/*#festival_detail section>div>h2::after{content: ""; display: block; background-color: #fed528;
+    width: 180px;height: 8px; margin: 15px auto 0;
+}*/
+
+/*-------------첫번째 섹션-----------------*/
+#festival_detail .detail_overview{
+    width: 100%;height: 700px;
+    background: url(../images/reservation_sample01.jpg) no-repeat center center; background-size: cover;
+    position: relative;
+}
+
+#festival_detail .detail_overview .bg{
+    content: ""; display: block; width: 100%; height: 100%;
+    background-color: #000; opacity: 0.2;
+    position: absolute; left: 0;top: 0;
+
+}
+#festival_detail .detail_overview>div{max-width: 1300px;height: 100%; margin: 0 auto; position: relative; z-index: 10;}
+
+/*-------------제목 텍스트 부분-----------------*/
+.detail_overview h1{
+    color: #fff; font-weight: 900; font-size: 50px; line-height: 1.3em;
+    width: 500px;
+    position: absolute; left: 20px; top: 50%;
+    transform: translateY(-50%);
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+.detail_overview h1 .detail_date{
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding: 8px 30px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #8117fe, #af28fe);
+    text-shadow: none;
+    margin-top: 50px;
+}
+
+/*테이블 부분*/
+.detail_overview #detail_table{
+    width: 600px;
+    position: absolute; right: 20px; top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#detail_table tr{border-bottom: 1px solid #e1e1e1;
+    height: 50px;line-height: 50px;
+}
+#detail_table th{
+    width: 150px;
+    font-weight: bold; color: #8117fe; text-align: left; padding-left: 30px;}
+#detail_table td{
+    padding-left: 30px;
+}
+
+
+/*--두번째 달력 섹션--*/
+.detail_select_date{
+    width: 100%;height: 700px;
+    position: relative;
+    padding: 100px 0;
+
+}
+.detail_select_date>div{
+    height: 500px;
+    display: grid;
+    grid-template-areas:
+        "tit tit"
+        "a b";
+    justify-items: center;
+}
+.detail_select_date>div>h2{grid-area: tit;}
+
+/*----캘린더 부분----*/
+
+/*오른쪽*/
+.calendar_desc>form{ grid-area: b;}
+.calendar_desc>form>p{margin-bottom: 20px;width: 500px;}
+.calendar_desc>form>p>strong{display: block; font-size: 20px; border-bottom: 1px solid #ccc; height: 40px; margin-bottom: 10px;}
+
+.calendar_desc>form>p>span{
+    display: block;
+    background-color: #efefef;
+    height: 80px;
+    text-align: right;
+    padding-top: 20px; padding-right: 20px;
+}
+.select_date>input{width: 50px;}
+.select_number{}
+.select_number>strong{}
+.select_number>.select_number_val{
+    /*height: 38px; */
+    border-radius: 5px; overflow: hidden; }
+.select_number>.select_number_val>*{ width: 40px; height: 38px;
+    line-height: 38px; text-align: center;
+}
+.select_number .select_number_val input:nth-of-type(odd){color: #fff; background-color: #6c6c6c; font-weight: bold; font-size: 18px; cursor: pointer;}
+
+/*예약하기 버튼*/
+.btn_reservation{}
+.btn_reservation input{display: block; width: 200px;height: 50px; margin: 50px 5px;
+    border-radius: 10px; background-color: #af28fe;
+    color: #fff; font-size: 1.2em; cursor: pointer;
+    transition: all 0.3s;
+}
+.btn_reservation:hover input{background-color: #8117fe; letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/*-----------------세번째 섹션-----------------*/
+.detail_desc{
+    width: 100%;height: auto;
+    position: relative;
+    background-color: #eee;
+    padding: 100px 0;
+}
+
+.detail_desc img{display: none;}
+
+
+
+
+
+
+/*---------------네번째 리뷰 섹션------------------*/
+/*리뷰 부분은 common.css에 (qna 게시판과 공통 사용*/
+
+
+
+
+
+
+.detail_review{
+    width: 100%;height: 400px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 100px 0;
+}
+/*-------------첫번째 평점 있는 부분--------------*/
+.review_overview{background-color: #eee9f4;
+    width: 100%; height: 190px;
+    padding: 20px 100px;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+.review_overview>li{padding: 15px 50px; width: 50%; align-self: center;}
+/*--------왼쪽---------*/
+.review_overview_left{text-align: center; border-right: 2px dashed #999;}
+.review_overview_left>p:first-child{}
+.review_overview_left>p:first-child strong{font-weight: bold; font-size: 1.8em; padding-right: 10px;}
+.review_overview_left>p:first-child span{opacity: 0.4;}
+.review_stars{margin-top: 10px;}
+.review_stars img{}
+/*--------오른쪽--------*/
+.review_overview_right{}
+.review_overview_right ul{}
+.review_overview_right li{margin-bottom: 10px; width: 100%; height: 15px; text-align: center;}
+.review_overview_right li span{display: inline-block;}
+.review_overview_right span:nth-child(1){width: 10%;}
+.review_overview_right span:nth-child(2){
+    background-color: #8c5cc6; width: 80%; border-radius: 15px; text-indent: -9999px;}
+.review_overview_right span:nth-child(3){width: 10%;}
