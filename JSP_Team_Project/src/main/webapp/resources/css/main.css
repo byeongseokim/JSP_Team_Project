@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/*메인페이지 레이아웃*/
+/*----------헤더 시작----------*/
+header{position: fixed;  width: 100vw; height: 100px; background-color: rgba(241, 241, 241, 0.14); z-index: 100;}
+#header{position: relative;}
+
+/*----------main----------*/
+main{}
+#main{width: 100vw;}
+#visual{width: 100vw; height: 100vh; background-color: #c9c; text-align: center; position: relative;}
+
+/*visual 배경 부분*/
+#visual .main_bg{}
+#visual .main_bg p{width: 100%; height: 100vh; position: absolute; left: 0;top: 0;}
+#visual .main_bg .bg00{background: url(../images/main_bg00.jpg) no-repeat 0 0}
+#visual .main_bg .bg01{background: url(../images/main_bg01.png) no-repeat 0 0}
+#visual .main_bg .bg02{background: url(../images/main_bg02.png) no-repeat 0 0}
+#visual .main_bg .bg03{background: url(../images/main_bg03.png) no-repeat 0 0}
+#visual .main_txt{color: #fff; font-size: 70px; font-weight: bold; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
