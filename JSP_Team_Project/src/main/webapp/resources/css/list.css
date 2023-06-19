@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*----------festivalList.html-------------*/
+
+#festival_list #list_wrap{width: 100%;}
+#festival_list #list_wrap>li{width: calc(100% / 3);  height: auto; padding: 15px; float: left;}
+#festival_list #list_wrap>li>a{
+    display: block;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+}
+
+#festival_list #list_img{width: 100%; height: 400px; overflow: hidden;}
+#festival_list #list_img img{
+    width: 100%; display: block;
+    height: 400px;
+    background-color: #ccc;
+}
+#festival_list .list_box{ padding: 30px; height: 280px;}
+#festival_list #list_pro_name{font-weight: bold; font-size: 20px; margin-bottom: 20px;}
+#festival_list #list_pro_info{}
+#festival_list #list_pro_info li{width: 100%; height: 20px; line-height: 20px; font-size: 15px; margin-bottom: 15px;}
+#list_pro_info #list_pro_info li:first-child{height:40px;}
+#festival_list #list_pro_info strong{width: 30%; display: inline-block; color: #8117fe; font-weight: bold; float: left;}
+#festival_list #list_pro_info span{width: 70%; float: left;}
+
