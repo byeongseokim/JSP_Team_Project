@@ -13,10 +13,21 @@
 --------------------------------
 DB연결을 위한 설정 변경
 
+DB연결 설정 파일 위치
+Project 폴더 -> src -> main -> java -> com -> example -> common -> config -> HikariDsConfig.java
 
+(DB 연결 설정을 밑의 SQL문을 입력한 계정정보와 알맞게 설정해주세요.)
 
-(아 이거 난 왜 못찾고있냐;; )
+![image](https://github.com/byeongseokim/JSP_Team_Project/assets/130523521/41d35a93-c881-4006-98ff-cd8152534a93)
 
+public final class HikariDsConfig {
+    private final String CLASSNAME = "org.mariadb.jdbc.Driver";
+    private final String JDBC_URL = "jdbc:mariadb://localhost:3306/culture_db";
+    private final String USERNAME = "사용자 ID";
+    private final String PASSWORD = "사용자 PW";
+    private final String CACHE_PREP_STMTS = "true";
+    private HikariDataSource ds;
+    private HikariConfig config;
 
 --------------------------------
 작동에 필요한 SQL문(Mariadb 기준)
