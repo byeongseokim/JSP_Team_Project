@@ -31,14 +31,14 @@ public final class HikariDsConfig {<br>
 
 --------------------------------
 작동에 필요한 SQL문(Mariadb 기준)
-
+<pre>
 //DB 생성
 create database culture_db;<br>
 use culture_db;<br>
 set SQL_SAFE_UPDATES = 0;<br>
 
 //유저테이블 생성
-<pre>create table user_basic
+create table user_basic
 (
     id      varchar(30)        not null,
     pwd     varchar(40)        not null,
@@ -46,7 +46,7 @@ set SQL_SAFE_UPDATES = 0;<br>
     regDate datetime default now() null,
     constraint user_basic_pk
         primary key (id)
-);</pre>
+);
 
 
 create table user_res
@@ -198,7 +198,7 @@ create table QnA_A
 );
 
 
-set SQL_SAFE_UPDATES = 1;
+set SQL_SAFE_UPDATES = 1;</pre>
 
 --------------------------------
 
