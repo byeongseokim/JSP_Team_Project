@@ -20,14 +20,14 @@ Project 폴더 -> src -> main -> java -> com -> example -> common -> config -> H
 
 ![image](https://github.com/byeongseokim/JSP_Team_Project/assets/130523521/41d35a93-c881-4006-98ff-cd8152534a93)
 
-public final class HikariDsConfig {
-    private final String CLASSNAME = "org.mariadb.jdbc.Driver";
-    private final String JDBC_URL = "jdbc:mariadb://localhost:3306/culture_db";
-    private final String USERNAME = "사용자 ID";
-    private final String PASSWORD = "사용자 PW";
-    private final String CACHE_PREP_STMTS = "true";
-    private HikariDataSource ds;
-    private HikariConfig config;
+public final class HikariDsConfig {<br>
+    private final String CLASSNAME = "org.mariadb.jdbc.Driver";<br>
+    private final String JDBC_URL = "jdbc:mariadb://localhost:3306/culture_db";<br>
+    private final String USERNAME = "사용자 ID";<br>
+    private final String PASSWORD = "사용자 PW";<br>
+    private final String CACHE_PREP_STMTS = "true";<br>
+    private HikariDataSource ds;<br>
+    private HikariConfig config;<br>
 
 --------------------------------
 작동에 필요한 SQL문(Mariadb 기준)
